@@ -194,7 +194,3 @@ endif
 
 " 配色方案
 colorscheme darkblue
-
-" 系统剪贴板
-vmap "+y :w !pbcopy<CR><CR>  
-nmap "+p :r !pbpaste<CR><CR> 
