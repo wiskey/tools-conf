@@ -14,18 +14,12 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'vim-airline/vim-airline'
+Plugin 'majutsushi/tagbar'
+Plugin 'airblade/vim-gitgutter'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'file:///Users/wiskey/.vim/bundle/nerdtree/'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -44,35 +38,7 @@ filetype plugin indent on    " required
 
 " autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
-set tags=tags;    "   其中 ; 不能没有
-set autochdir
-
-if has("cscope")
-	set cscopetag   " 使支持用 Ctrl+]  和 Ctrl+t 快捷键在代码间跳来跳去
-	" check cscope for definition of a symbol before checking ctags:
-	" set to 1 if you want the reverse search order.
-	 set csto=1
-
-	 " add any cscope database in current directory
-	 if filereadable("cscope.out")
-		 cs add cscope.out
-	 " else add the database pointed to by environment variable
-	 elseif $CSCOPE_DB !=""
-		 cs add $CSCOPE_DB
-	 endif
-
-	 " show msg when any other cscope db added
-	 set cscopeverbose
-
-	 nmap <C-/>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-	 nmap <C-/>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-	 nmap <C-/>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-	 nmap <C-/>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-	 nmap <C-/>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-	 nmap <C-/>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-	 nmap <C-/>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-	 nmap <C-/>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-endif
+nmap <F8> :TagbarToggle<CR>
 
 " 语法高亮  
 set syntax=on  
@@ -103,11 +69,6 @@ set number
   
 " 历史记录数  
 set history=1000  
-  
-"禁止生成临时文件  
-set nobackup  
-set noswapfile  
-  
   
 "搜索逐字符高亮  
 set hlsearch  
