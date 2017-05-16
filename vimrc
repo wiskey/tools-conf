@@ -13,11 +13,13 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive' " git plugin
+Plugin 'gregsexton/gitv'	" git plugin
+Plugin 'airblade/vim-gitgutter' " git plugin
+
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'vim-airline/vim-airline'
 Plugin 'majutsushi/tagbar'
-Plugin 'airblade/vim-gitgutter'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
 
