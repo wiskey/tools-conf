@@ -60,8 +60,9 @@ set tabstop=4
 set softtabstop=4  
 set shiftwidth=4  
   
-" 不要用空格代替制表符  
-set noexpandtab  
+" 用空格代替制表符  
+set ts=4
+set expandtab  
   
 " 在行和段开始处使用制表符  
 set smarttab  
