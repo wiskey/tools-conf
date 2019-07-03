@@ -1,4 +1,4 @@
-git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"  
+git config --global alias.lg "log --color --graph --date-order --pretty=format:'%C(magenta)%h %C(reset)-%C(red)%d %C(reset)%s %C(bold blue)<%an> %C(reset)%C(green)%ar%C(cyan)(%ad)' --date=local"  
 
 git config --global color.ui true
 git config --global color.status true 
